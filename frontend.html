@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title> 
+      Real Estate Price Predictor 
+    </title> 
+  </head> 
+  
+  <body style="text-align:center;" id="body"> 
+    <h1 style="color:teal;"> 
+      Real Estate Price Predictor 
+    </h1> 
+  
+    <p> 
+        <!-- Making a text input -->
+        <input type="number" id="BuildingArea1" placeholder="Area"> 
+        <input type="number" id="Rooms1" placeholder="Number of Rooms">
+	<input type="number" id="Postcode1" placeholder="Postal Code">  
+          
+        <!-- Button to send data -->
+        <button onclick="predict()">Predict</button> 
+  
+      <!-- For printing result from server -->
+      <p>Prediction : <span class="result1" style="color:green"> </span></p>
+      
+   </p> 
+
+    <h1 style="color:teal;"> 
+      Real Estate Price Predictor Re-Train
+    </h1> 
+  
+    <p> 
+        <!-- Making a text input -->
+        <input type="number" id="BuildingArea2" placeholder="Area"> 
+        <input type="number" id="Rooms2" placeholder="Number of Rooms">
+	<input type="number" id="Postcode2" placeholder="Postal Code">
+	<input type="number" id="Price2" placeholder="Price">  
+          
+        <!-- Button to send data -->
+        <button onclick="retrain()">Re Train</button> 
+  
+      <!-- For printing result from server -->
+      <p>Status : <span class="result2" style="color:green"> </span></p>
+      
+   </p> 
+
+    <h1 style="color:teal;"> 
+      Real Estate Price Predictor Model Reset
+    </h1> 
+  
+    <p> 
+         
+        <!-- Button to send data -->
+        <button onclick="reset()">Reset Model</button> 
+  
+      <!-- For printing result from server -->
+      <p>Status : <span class="result3" style="color:green"> </span></p>
+      
+   </p> 
+  
+  <!-- Include the JavaScript file -->
+  <script type = "text/javascript"
+	src="{{ url_for('static', filename='backend_connect.js') }}"></script> 
+  
+  </body> 
+</html> 
